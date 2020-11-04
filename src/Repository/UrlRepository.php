@@ -40,7 +40,7 @@ final class UrlRepository
             ->setParameter(':clicks', $clicks)
             ->getQuery()->getOneOrNullResult();
         if (!$url instanceof Url)
-            throw new EntityNotFoundException("Url не найден");
+            throw new EntityNotFoundException("Url не найден", 404);
 
         return $url;
     }

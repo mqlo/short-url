@@ -26,8 +26,8 @@ final class UrlController extends AbstractController
             try {
                 $handler->handle($command);
                 return $this->redirectToRoute('home');
-            } catch (\DomainException $e) {
-                $this->addFlash('error', $e->getMessage());
+            } catch (\Exception $e) {
+                dd($e->getMessage());
             }
         }
 
