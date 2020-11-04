@@ -19,16 +19,21 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../mailhog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Repository" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Entity/Url/UseCase/Create" />
+      <recent name="$PROJECT_DIR$/src/Entity/Url" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Repository" />
+      <recent name="$PROJECT_DIR$/src/Entity/Url" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -40,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604413624716</updated>
-      <workItem from="1604413626636" duration="6548000" />
+      <workItem from="1604413626636" duration="20975000" />
     </task>
     <servers />
   </component>
@@ -52,18 +57,38 @@
       <screen x="72" y="25" width="1294" height="743" />
     </state>
     <state x="314" y="58" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.25.1294.743@72.25.1294.743" timestamp="1604419603547" />
+    <state x="520" y="81" width="387" height="651" key="#com.intellij.ide.util.MemberChooser" timestamp="1604424981063">
+      <screen x="72" y="25" width="1294" height="743" />
+    </state>
+    <state x="520" y="81" width="387" height="651" key="#com.intellij.ide.util.MemberChooser/72.25.1294.743@72.25.1294.743" timestamp="1604424981063" />
+    <state x="367" y="25" width="694" height="743" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604435225375">
+      <screen x="72" y="25" width="1294" height="743" />
+    </state>
+    <state x="367" y="25" width="694" height="743" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.25.1294.743@72.25.1294.743" timestamp="1604435225375" />
+    <state x="452" y="146" width="524" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604427595374">
+      <screen x="72" y="25" width="1294" height="743" />
+    </state>
+    <state x="452" y="146" width="524" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.25.1294.743@72.25.1294.743" timestamp="1604427595374" />
+    <state x="452" y="154" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604435183097">
+      <screen x="72" y="25" width="1294" height="743" />
+    </state>
+    <state x="452" y="154" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.25.1294.743@72.25.1294.743" timestamp="1604435183097" />
     <state x="502" y="154" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604414834881">
       <screen x="72" y="25" width="1294" height="743" />
     </state>
     <state x="502" y="154" width="424" height="491" key="FileChooserDialogImpl/72.25.1294.743@72.25.1294.743" timestamp="1604414834881" />
+    <state x="394" y="125" width="744" height="563" key="NewPhpClassDialog" timestamp="1604432283160">
+      <screen x="72" y="25" width="1294" height="743" />
+    </state>
+    <state x="394" y="125" width="744" height="563" key="NewPhpClassDialog/72.25.1294.743@72.25.1294.743" timestamp="1604432283160" />
     <state x="223" y="31" width="992" height="737" key="SettingsEditor" timestamp="1604418258811">
       <screen x="72" y="25" width="1294" height="743" />
     </state>
     <state x="223" y="31" width="992" height="737" key="SettingsEditor/72.25.1294.743@72.25.1294.743" timestamp="1604418258811" />
-    <state x="621" y="287" width="322" height="247" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604420258008">
+    <state x="621" y="287" width="322" height="254" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604420261715">
       <screen x="72" y="25" width="1294" height="743" />
     </state>
-    <state x="621" y="287" width="322" height="247" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/72.25.1294.743@72.25.1294.743" timestamp="1604420258008" />
+    <state x="621" y="287" width="322" height="254" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/72.25.1294.743@72.25.1294.743" timestamp="1604420261715" />
     <state x="439" y="314" width="540" height="177" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1604416020465">
       <screen x="72" y="25" width="1294" height="743" />
     </state>

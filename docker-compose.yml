@@ -73,7 +73,7 @@ services:
     container_name: ${COMPOSE_PROJECT_NAME}-mailer
     image: mailhog/mailhog
     ports:
-      - "8125:8025"
+      - "8225:8025"
 
 #  redis:
 #    image: redis:3.0

@@ -30,6 +30,7 @@ clear:
 install:
 	docker-compose run --rm php-cli composer install
 	docker-compose run --rm php-cli wait-for-it postgres:5432 -t 30
+	docker-compose run --rm php-cli php bin/console doctrine:migrations:migrate --no-interaction
 
 lint:
 	docker-compose run --rm php-cli composer lint

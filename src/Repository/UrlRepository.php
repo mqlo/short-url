@@ -2,49 +2,50 @@
 
 namespace App\Repository;
 
-use App\Entity\Url;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Persistence\ManagerRegistry;
+use App\Entity\Url\Url;
+use Doctrine\ORM\EntityManagerInterface;
 
-/**
- * @method Url|null find($id, $lockMode = null, $lockVersion = null)
- * @method Url|null findOneBy(array $criteria, array $orderBy = null)
- * @method Url[]    findAll()
- * @method Url[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
- */
-class UrlRepository extends ServiceEntityRepository
+final class UrlRepository
 {
-    public function __construct(ManagerRegistry $registry)
+    private EntityManagerInterface $em;
+    /**
+     * @var \Doctrine\ORM\EntityRepository
+     */
+    private $repo;
+
+    public function __construct(EntityManagerInterface $em)
     {
-        parent::__construct($registry, Url::class);
+        $this->em = $em;
+        $this->repo = $em->getRepository(Url::class);
     }
 
-    // /**
-    //  * @return Url[] Returns an array of Url objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function flush(): void
     {
-        return $this->createQueryBuilder('u')
-            ->andWhere('u.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('u.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+        $this->em->flush();
     }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Url
+    public function all(): array
     {
-        return $this->createQueryBuilder('u')
-            ->andWhere('u.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        return $this->repo->findAll();
     }
-    */
+
+    public function add(Url $url): void
+    {
+        $this->em->persist($url);
+    }
+
+    public function remove(Url $url): void
+    {
+        $this->em->remove($url);
+    }
+
+    public function hasByHash(string $value): bool
+    {
+        return $this->repo->createQueryBuilder('t')
+                ->select('COUNT(t.id)')
+                ->andWhere('t.hash = :hash')
+                ->setParameter(':hash', $value)
+                ->getQuery()
+                ->getSingleScalarResult() > 0;
+    }
 }
