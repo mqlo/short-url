@@ -19,7 +19,7 @@ final class Handler
         $this->hasher = $hasher;
     }
 
-    public function handle(Command $command)
+    public function handle(Command $command): void
     {
         $url = new Url(
             Id::generate(),

@@ -3,7 +3,9 @@
 namespace App\Repository;
 
 use App\Entity\Url\Url;
+use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\EntityNotFoundException;
 
 final class UrlRepository
 {
@@ -22,6 +24,25 @@ final class UrlRepository
     public function flush(): void
     {
         $this->em->flush();
+    }
+
+    public function refresh(Url $url): void
+    {
+        $this->em->refresh($url);
+    }
+
+    public function findByHashLessThanClicks(string $hash, int $clicks): Url
+    {
+        $url = $this->repo->createQueryBuilder('t')
+            ->andWhere('t.hash = :hash')
+            ->andWhere('t.clicks < :clicks')
+            ->setParameter(':hash', $hash)
+            ->setParameter(':clicks', $clicks)
+            ->getQuery()->getOneOrNullResult();
+        if (!$url instanceof Url)
+            throw new EntityNotFoundException("Url не найден");
+
+        return $url;
     }
 
     public function all(): array

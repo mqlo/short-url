@@ -790,7 +790,7 @@ false posixrules
     <database id="2" parent="1" name="app">
       <ObjectId>16384</ObjectId>
       <Owner>app</Owner>
-      <IntrospectionStateNumber>490</IntrospectionStateNumber>
+      <IntrospectionStateNumber>497</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -847,7 +847,7 @@ false posixrules
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>app</Owner>
-      <IntrospectionStateNumber>491</IntrospectionStateNumber>
+      <IntrospectionStateNumber>498</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="16" parent="2" name="heap">

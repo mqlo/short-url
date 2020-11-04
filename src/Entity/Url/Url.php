@@ -2,7 +2,6 @@
 
 namespace App\Entity\Url;
 
-use App\Repository\UrlRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -11,6 +10,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 final class Url
 {
+    public const MAX_CLICKS = 5;
+
     /**
      * @ORM\Column(type="url_id")
      * @ORM\Id
@@ -58,6 +59,11 @@ final class Url
     public function getClicks(): int
     {
         return $this->clicks;
+    }
+
+    public function getClicksAgo(): int
+    {
+        return self::MAX_CLICKS - $this->getClicks();
     }
 
     public function incClicks(): self

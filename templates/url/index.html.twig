@@ -8,24 +8,19 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Value</th>
+                <th>Источник</th>
                 <th>Hash</th>
-                <th>Clicks</th>
-                <th>actions</th>
+                <th>Осталось кликов</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
         {% for url in urls %}
             <tr>
-                <td>{{ url.id }}</td>
-                <td>{{ url.value }}</td>
-                <td>{{ url.hash }}</td>
-                <td>{{ url.clicks }}</td>
-                <td>
-                    <a href="{{ path('url_show', {'id': url.id}) }}">show</a>
-                    <a href="{{ path('url_edit', {'id': url.id}) }}">edit</a>
-                </td>
+                <td>{{ url.source.value }}</td>
+                <td>{{ url.hash.value }}</td>
+                <td>{{ url.clicksAgo }}</td>
+                <td><a href="/{{ url.hash.value }}">http://localhost:8280/{{ url.hash.value }}</a></td>
             </tr>
         {% else %}
             <tr>

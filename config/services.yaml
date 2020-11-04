@@ -31,3 +31,4 @@ services:
     # please note that last definitions always *replace* previous ones
     App\Entity\Url\UseCase\Create\Handler: ~
     App\Entity\Url\Services\Hasher: ~
+    App\Entity\Url\UseCase\Redirect\Handler: ~
